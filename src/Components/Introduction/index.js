@@ -1,11 +1,12 @@
 import React from "react";
 import Title from "../Title";
+import css from "./Introduction.module.css";
 
 function Introduction() {
   return (
-  <div>
+  <section className={css.introductionContainer}>
     <Title />
-  </div>
+  </section>
   )
 }
 

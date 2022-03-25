@@ -1,8 +1,8 @@
 import Main from "../Main";
-import "./App.css";
+import css from "./App.module.css";
 
 function App() {
-  return <div className="App">
+  return <div className={css.app}>
     <Main />
   </div>;
 }

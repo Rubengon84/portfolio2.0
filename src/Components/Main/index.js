@@ -1,12 +1,12 @@
+import React from "react";
 import SocialMedia from "../SocialMedia";
 import Introduction from "../Introduction";
 import Projects from "../Projects";
-
-import React from "react";
+import css from "./Main.module.css"
 
 function Main() {
   return ( 
-  <main>
+  <main className={css.mainContainer}>
     <SocialMedia />
     <Introduction />
     <Projects />
