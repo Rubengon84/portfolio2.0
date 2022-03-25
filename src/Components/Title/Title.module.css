@@ -1,4 +1,17 @@
 
+.titleContainer {
+  width: 80%;
+  color: white;
+}
+
+.portfolio {
+  display: block;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
 .letterR {
   font-size: 5rem;
 }
