@@ -1,12 +1,13 @@
 import React from 'react'
-import css from "../Projects/Projects.module.css"
+import "../Projects/Projects.css";
 
-function ProjectGridBlock( {center}) {
+function ProjectGridBlock( {center, projectImage}) {
   return (
     <div
-      className={center ? `${css.gridBlock} centerBlock` : `${css.gridBlock}`}
-      id={center ? `centerBlock` : ""}
-    ></div>
+      className={center ? `gridBlock centerBlock` : `gridBlock`}
+    >
+    <img src={projectImage} alt={projectImage} className="projectImage"/>  
+    </div>
   );
 }
 

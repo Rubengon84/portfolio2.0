@@ -1,16 +1,15 @@
 import React from "react";
 import ProjectGridBlock from "../ProjectGridBlock";
-import css from "../Projects/Projects.module.css";
+import "../Projects/Projects.css";
 
-function ProjectGridLayer({ centerPiece }) {
+function ProjectGridLayer({ centerPiece, projectImage }) {
   return (
     <div
       className={
-        centerPiece ? `${css.gridLayer} centerPiece` : `${css.gridLayer}`
+        centerPiece ? `gridLayer centerPiece` : `gridLayer`
       }
-      id = {centerPiece ? `centerPiece` : ""}
     >
-      <ProjectGridBlock center={centerPiece ? true : false} />
+      <ProjectGridBlock projectImage={projectImage} center={centerPiece ? true : false} />
     </div>
   );
 }

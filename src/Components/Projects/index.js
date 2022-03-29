@@ -2,8 +2,14 @@ import React from "react";
 import { gsap } from "gsap";
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import css from "./Projects.module.css"
+import "./Projects.css";
 import ProjectGridLayer from "../ProjectGridLayer";
+import apptivityImage from "../../Images/projects/apptivity.PNG";
+import portfolioImage from "../../Images/projects/portfolio.PNG";
+import catsImage from "../../Images/projects/cats.PNG";
+import rugImage from "../../Images/projects/rug.PNG";
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,21 +19,21 @@ function Projects() {
     gsap
       .timeline({
         scrollTrigger: {
-          trigger: `.${css.gridContainer}`,
+          trigger: ".gridContainer",
           start: "top top",
-          end: () => window.innerHeight * 1,
+          end: () => window.innerHeight * 2,
           scrub: true,
-          pin: `.${css.grid}`,
+          pin: ".grid",
           anticipatePin: 1,
         },
       })
-      .set(`.${css.gridBlock}:not(#centerBlock)`, { autoAlpha: 0 })
+      .set(".gridBlock:not(.centerBlock)", { autoAlpha: 0 })
       .to(
-        `.${css.gridBlock}:not(#centerBlock)`,
+        ".gridBlock:not(.centerBlock)",
         { duration: 0.1, autoAlpha: 1 },
         0.001
       )
-      .from(`.${css.gridLayer}`, {
+      .from(".gridLayer", {
         scale: 3.3333,
         ease: "none",
       });
@@ -35,33 +41,32 @@ function Projects() {
 
   // // Images to make it look better, not related to the effect
   // const size = Math.max(window.innerWidth, window.innerHeight);
-  // gsap.set(`.${css.gridBlock}`, {
+  // gsap.set(".gridBlock", {
   //   backgroundImage: (i) =>
   //     `url(https://picsum.photos/${size}/${size}?random=${i})`,
   // });
 
   // const bigImg = new Image();
   // bigImg.addEventListener("load", function () {
-  //   gsap.to(`.centerPiece .${css.gridBlock}`, { autoAlpha: 1, duration: 0.5 });
+  //   gsap.to(".centerPiece .gridBlock", { autoAlpha: 1, duration: 0.5 });
   // });
 
   // bigImg.src = `https://picsum.photos/${size}/${size}?random=50`;
   // console.log(bigImg);
-
   return (
     <div>
       <h1 className="header-section">
         Scroll down to see a photo gallery being revealed
       </h1>
-      <div className={css.gridContainer} id="gridContainer">
-        <div className={css.grid} id="grid">
+      <div className="gridContainer">
+        <div className="grid">
           <ProjectGridLayer />
-          <ProjectGridLayer />
-          <ProjectGridLayer />
-          <ProjectGridLayer centerPiece={true}/>
-          <ProjectGridLayer />
-          <ProjectGridLayer />
-          <ProjectGridLayer />
+          <ProjectGridLayer projectImage={portfolioImage} />
+          <ProjectGridLayer projectImage={""} />
+          <ProjectGridLayer centerPiece={true} projectImage={apptivityImage} />
+          {/* <ProjectGridLayer /> */}
+          <ProjectGridLayer projectImage={catsImage} />
+          <ProjectGridLayer projectImage={rugImage} />
           <ProjectGridLayer />
           <ProjectGridLayer />
         </div>
