@@ -1,0 +1,192 @@
+.gridContainer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.grid {
+  top: 100px;
+  left: 0;
+  z-index: 1;
+  width: 70vw;
+  height: 60vw;
+  margin: 0 calc(100vw / 20 * 3);
+  position: absolute;
+}
+
+@media only screen and (max-width: 580px) {
+  .grid {
+    margin: 0;
+    width: 100vw;
+    height: 89.444vw;
+  }
+}
+
+.gridBlock {
+  box-shadow: 0 0 0.8rem 0.3rem gray;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+}
+
+.gridLayer {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  will-change: transform;
+  transform-origin: 44.951% 50%;
+}
+.gridLayer:nth-child(1) .gridBlock {
+  top: 0vw;
+  left: 17.5vw;
+  width: 12vw;
+  height: 15vw;
+}
+@media only screen and (max-width: 580px) {
+  .gridLayer:nth-child(1) .gridBlock {
+    top: 9.111vw;
+    left: 32.278vw;
+    width: 16vw;
+    height: 19vw;
+  }
+}
+.gridLayer:nth-child(2) .gridBlock {
+  top: 0;
+  left: 32.5vw;
+  width: 25vw;
+  height: 15vw;
+}
+@media only screen and (max-width: 580px) {
+  .gridLayer:nth-child(2) .gridBlock {
+    top: 9.111vw;
+    left: 52.333vw;
+    width: 32.389vw;
+    height: 19vw;
+  }
+}
+.gridLayer:nth-child(3) .gridBlock {
+  left: 0;
+  top: 10vw;
+  width: 15vw;
+  height: 25vw;
+}
+@media only screen and (max-width: 580px) {
+  .gridLayer:nth-child(3) .gridBlock {
+    top: 19.278vw;
+    left: 7vw;
+    width: 21.389vw;
+    height: 33.389vw;
+  }
+}
+.gridLayer:nth-child(4) .gridBlock {
+  top: 17.5vw;
+  left: 17.5vw;
+  width: 30vw;
+  height: 30vw;
+}
+@media only screen and (max-width: 580px) {
+  .gridLayer:nth-child(4) .gridBlock {
+    top: 32.278vw;
+    left: 32.278vw;
+    width: 35.444vw;
+    height: 35.444vw;
+  }
+}
+.gridLayer:nth-child(5) {
+  z-index: 1;
+}
+.gridLayer:nth-child(5) .gridBlock {
+  top: 17.5vw;
+  left: 50vw;
+  width: 20vw;
+  height: 15vw;
+}
+@media only screen and (max-width: 580px) {
+  .gridLayer:nth-child(5) .gridBlock {
+    top: 32.278vw;
+    left: 72vw;
+    width: 22.278vw;
+    height: 15.278vw;
+  }
+}
+.gridLayer:nth-child(5) a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gridLayer:nth-child(5) svg {
+  width: 1.75vw;
+}
+@media only screen and (max-width: 580px) {
+  .gridLayer:nth-child(5) svg {
+    width: 4.722vw;
+  }
+}
+.gridLayer:nth-child(6) .gridBlock {
+  left: 50vw;
+  top: 36vw;
+  width: 15vw;
+  height: 21vw;
+}
+@media only screen and (max-width: 580px) {
+  .gridLayer:nth-child(6) .gridBlock {
+    top: 51.889vw;
+    left: 72vw;
+    width: 20.389vw;
+    height: 26.389vw;
+  }
+}
+
+.gridLayer:nth-child(7) .gridBlock {
+  left: 0vw;
+  top: 38vw;
+  width: 20vw;
+  height: 19vw;
+}
+
+@media only screen and (max-width: 580px) {
+  .gridLayer:nth-child(7) .gridBlock {
+   top: 56.889vw;
+   left: 7vw;
+   width: 29.389vw;
+   height: 21.389vw;
+  }
+}
+
+.gridLayer:nth-child(8) .gridBlock {
+  bottom: 0vw;
+  left: 22.5vw;
+  width: 25vw;
+  height: 10vw;
+}
+@media only screen and (max-width: 580px) {
+  .gridLayer:nth-child(8) .gridBlock {
+   top: 71.889vw;
+   left: 40vw;
+   width: 28vw;
+   height: 12.389vw;
+  }
+}
+/* .gridLayer:nth-child(9) .gridBlock {
+  bottom: 0;
+  left: 50vw;
+  width: 18vw;
+  height: 22vw;
+}
+@media only screen and (max-width: 580px) {
+  .gridLayer:nth-child(9) .gridBlock {
+    top: 73.889vw;
+    left: 58.889vw;
+    width: 15.278vw;
+    height: 15.278vw;
+  }
+} */
+.gridBlock {
+  display: block;
+  position: absolute;
+}

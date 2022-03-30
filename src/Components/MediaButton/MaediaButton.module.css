@@ -1,0 +1,18 @@
+
+.socialMediaContainer {
+  width: 2vw;
+  height: auto;
+  background-color: white;
+}
+
+.imageLogoContainer {
+  width: 100%;
+  height: 25%;
+}
+
+.logoImage {
+  padding: 0.3rem;
+  width: 100%;
+  height: auto;
+  
+}
