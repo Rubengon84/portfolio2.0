@@ -4,10 +4,16 @@ import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Projects.css";
 import ProjectGridLayer from "../ProjectGridLayer";
+
+// Load Images for the showroom
 import apptivityImage from "../../Images/projects/apptivity.PNG";
 import portfolioImage from "../../Images/projects/portfolio.PNG";
 import catsImage from "../../Images/projects/cats.PNG";
 import rugImage from "../../Images/projects/rug.PNG";
+import pigeonsImage from "../../Images/projects/pigeons.PNG";
+import photoShowroomImage from "../../Images/projects/photo-showroom.PNG";
+import mastermindImage from "../../Images/projects/masterMind.PNG";
+import redditImage from "../../Images/projects/reddit.PNG";
 
 
 
@@ -60,15 +66,15 @@ function Projects() {
       </h1>
       <div className="gridContainer">
         <div className="grid">
-          <ProjectGridLayer />
+          <ProjectGridLayer projectImage={redditImage} />
           <ProjectGridLayer projectImage={portfolioImage} />
-          <ProjectGridLayer projectImage={""} />
+          <ProjectGridLayer projectImage={mastermindImage} />
           <ProjectGridLayer centerPiece={true} projectImage={apptivityImage} />
           {/* <ProjectGridLayer /> */}
           <ProjectGridLayer projectImage={catsImage} />
           <ProjectGridLayer projectImage={rugImage} />
-          <ProjectGridLayer />
-          <ProjectGridLayer />
+          <ProjectGridLayer projectImage={photoShowroomImage} />
+          <ProjectGridLayer projectImage={pigeonsImage} />
         </div>
       </div>
     </div>
