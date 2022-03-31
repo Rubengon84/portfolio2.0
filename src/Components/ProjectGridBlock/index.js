@@ -9,7 +9,13 @@ function ProjectGridBlock({ center, projectImage, link }) {
       }}
       className={center ? `gridBlock centerBlock` : `gridBlock`}
     >
-      <img src={projectImage} alt={projectImage} className="projectImage" />
+      {link ? (
+        <a href={link} target="_blank" rel="noreferrer">
+          <img src={projectImage} alt={projectImage} className="projectImage" />
+        </a>
+      ) : (
+        <img src={projectImage} alt={projectImage} className="projectImage" />
+      )}
     </div>
   );
 }
