@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Projects.css";
 import ProjectGridLayer from "../ProjectGridLayer";
+import { changeClasses } from "../../HelperFunctions";
+import Footer from "../Footer";
 
 // Load Images for the showroom
 import apptivityImage from "../../Images/projects/apptivity.PNG";
@@ -27,7 +29,10 @@ function Projects() {
         scrollTrigger: {
           trigger: ".gridContainer",
           start: "top top",
-          end: () => window.innerHeight * 2,
+          markers: true,
+          end: () => (window.innerHeight * 2),
+          onEnterBack: () => { changeClasses("gridLayer", "")},
+          onLeave: () => { changeClasses("gridLayer", "active")},
           scrub: true,
           pin: ".grid",
           anticipatePin: 1,
@@ -66,15 +71,33 @@ function Projects() {
       </h1>
       <div className="gridContainer">
         <div className="grid">
-          <ProjectGridLayer projectImage={redditImage} />
-          <ProjectGridLayer projectImage={portfolioImage} />
-          <ProjectGridLayer projectImage={mastermindImage} />
-          <ProjectGridLayer centerPiece={true} projectImage={apptivityImage} />
+          <ProjectGridLayer
+            projectImage={redditImage}
+          />
+          <ProjectGridLayer
+            projectImage={portfolioImage}
+          />
+          <ProjectGridLayer
+            projectImage={mastermindImage}
+          />
+          <ProjectGridLayer
+            link={"https://apptivity-app.netlify.app"}
+            centerPiece={true}
+            projectImage={apptivityImage}
+          />
           {/* <ProjectGridLayer /> */}
-          <ProjectGridLayer projectImage={catsImage} />
-          <ProjectGridLayer projectImage={rugImage} />
-          <ProjectGridLayer projectImage={photoShowroomImage} />
-          <ProjectGridLayer projectImage={pigeonsImage} />
+          <ProjectGridLayer
+            projectImage={catsImage}
+          />
+          <ProjectGridLayer
+            projectImage={rugImage}
+          />
+          <ProjectGridLayer  
+            projectImage={photoShowroomImage}
+          />
+          <ProjectGridLayer
+            projectImage={pigeonsImage}
+          />
         </div>
       </div>
     </div>
