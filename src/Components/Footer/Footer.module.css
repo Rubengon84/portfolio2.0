@@ -1,0 +1,19 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.footer p, span {
+  color: white;
+}
+
+.letterR {
+  font-size: 1.8rem;
+  vertical-align:sub;
+}
+

@@ -5,11 +5,11 @@
 }
 
 .grid {
-  top: 100px;
+  top: 150px;
   left: 0;
-  z-index: 1;
+  z-index: -5;
   width: 70vw;
-  height: 60vw;
+  height: 62vw;
   margin: 0 calc(100vw / 20 * 3);
   position: absolute;
 }
@@ -24,6 +24,7 @@
 
 .gridBlock {
   box-shadow: 0 0 0.8rem 0.3rem gray;
+  /* z-index: 5; */
 }
 
 .projectImage {
@@ -39,7 +40,14 @@
   position: absolute;
   will-change: transform;
   transform-origin: 44.951% 50%;
+  z-index: -1;
 }
+
+/* .gridLayer:nth-child(1) {
+  z-index: 2;
+} */
+
+
 .gridLayer:nth-child(1) .gridBlock {
   top: 0vw;
   left: 17.5vw;
@@ -96,9 +104,11 @@
     height: 35.444vw;
   }
 }
-.gridLayer:nth-child(5) {
+/* .gridLayer:nth-child(5) {
   z-index: 1;
-}
+} */
+
+
 .gridLayer:nth-child(5) .gridBlock {
   top: 17.5vw;
   left: 50vw;
@@ -113,7 +123,7 @@
     height: 15.278vw;
   }
 }
-.gridLayer:nth-child(5) a {
+/* .gridLayer:nth-child(5) a {
   height: 100%;
   display: flex;
   align-items: center;
@@ -121,7 +131,7 @@
 }
 .gridLayer:nth-child(5) svg {
   width: 1.75vw;
-}
+} */
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(5) svg {
     width: 4.722vw;
@@ -158,15 +168,16 @@
   }
 }
 
+
 .gridLayer:nth-child(8) .gridBlock {
-  bottom: 0vw;
+  top: 49.889vw;
   left: 22.5vw;
   width: 25vw;
   height: 10vw;
 }
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(8) .gridBlock {
-   top: 71.889vw;
+   top: 70.889vw;
    left: 40vw;
    width: 28vw;
    height: 12.389vw;
@@ -186,7 +197,19 @@
     height: 15.278vw;
   }
 } */
+
+ .active {
+  width:min-content ;
+  height: min-content;
+  z-index: 3;
+ }
+
+ .active img:hover {
+   border: 2px solid blue;
+ }
+
 .gridBlock {
   display: block;
   position: absolute;
+  z-index: 6;
 }
