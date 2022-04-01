@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Projects.css";
 import ProjectGridLayer from "../ProjectGridLayer";
+import { changeClasses } from "../../HelperFunctions";
 
 // Load Images for the showroom
 import apptivityImage from "../../Images/projects/apptivity.PNG";
@@ -27,7 +28,9 @@ function Projects() {
         scrollTrigger: {
           trigger: ".gridContainer",
           start: "top top",
-          end: () => window.innerHeight * 2,
+          end: () => (window.innerHeight * 2),
+          onEnterBack: () => { changeClasses("gridLayer", "")},
+          onLeave: () => { changeClasses("gridLayer", "active")},
           scrub: true,
           pin: ".grid",
           anticipatePin: 1,
@@ -66,15 +69,40 @@ function Projects() {
       </h1>
       <div className="gridContainer">
         <div className="grid">
-          <ProjectGridLayer projectImage={redditImage} />
-          <ProjectGridLayer projectImage={portfolioImage} />
-          <ProjectGridLayer projectImage={mastermindImage} />
-          <ProjectGridLayer centerPiece={true} projectImage={apptivityImage} />
+          <ProjectGridLayer
+            link={"https://reddit-jimmy.netlify.app/"}
+            projectImage={redditImage}
+          />
+          <ProjectGridLayer
+            link={"https://rubengon84.github.io/"}
+            projectImage={portfolioImage}
+          />
+          <ProjectGridLayer
+            link={"https://dreamy-mcnulty-895324.netlify.app/"}
+            projectImage={mastermindImage}
+          />
+          <ProjectGridLayer
+            link={"https://apptivity-app.netlify.app"}
+            centerPiece={true}
+            projectImage={apptivityImage}
+          />
           {/* <ProjectGridLayer /> */}
-          <ProjectGridLayer projectImage={catsImage} />
-          <ProjectGridLayer projectImage={rugImage} />
-          <ProjectGridLayer projectImage={photoShowroomImage} />
-          <ProjectGridLayer projectImage={pigeonsImage} />
+          <ProjectGridLayer
+            link={"https://cats-api-table.herokuapp.com/"}
+            projectImage={catsImage}
+          />
+          <ProjectGridLayer
+            link={"https://rug-website-project.netlify.app/"}
+            projectImage={rugImage}
+          />
+          <ProjectGridLayer
+            link={"https://ivan-gallery.herokuapp.com/"}
+            projectImage={photoShowroomImage}
+          />
+          <ProjectGridLayer
+            link={"https://wikipigeons.netlify.app/"}
+            projectImage={pigeonsImage}
+          />
         </div>
       </div>
     </div>
