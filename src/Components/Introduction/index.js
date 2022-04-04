@@ -6,6 +6,7 @@ function Introduction() {
   return (
   <section className={css.introductionContainer}>
     <Title />
+    <div className={css.constructionImage}></div>
   </section>
   )
 }

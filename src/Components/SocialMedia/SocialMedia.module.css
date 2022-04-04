@@ -1,6 +1,11 @@
 
 .socialMediaContainer {
+  width: 5vw;
+  max-width: 35px;
+  height: auto;
+  background-color: white;
   position: fixed;
-  top: 40%;
-  left: 5%;
+  top: 35%;
+  left: 3%;
+  border: solid 2px black;
 }

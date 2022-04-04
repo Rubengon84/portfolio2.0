@@ -28,9 +28,13 @@ function Projects() {
         scrollTrigger: {
           trigger: ".gridContainer",
           start: "top top",
-          end: () => (window.innerHeight * 2),
-          onEnterBack: () => { changeClasses("gridLayer", "")},
-          onLeave: () => { changeClasses("gridLayer", "active")},
+          end: () => window.innerHeight * 2,
+          onEnterBack: () => {
+            changeClasses("gridLayer", "");
+          },
+          onLeave: () => {
+            changeClasses("gridLayer", "active");
+          },
           scrub: true,
           pin: ".grid",
           anticipatePin: 1,
@@ -48,25 +52,8 @@ function Projects() {
       });
   }, []);
 
-  // // Images to make it look better, not related to the effect
-  // const size = Math.max(window.innerWidth, window.innerHeight);
-  // gsap.set(".gridBlock", {
-  //   backgroundImage: (i) =>
-  //     `url(https://picsum.photos/${size}/${size}?random=${i})`,
-  // });
-
-  // const bigImg = new Image();
-  // bigImg.addEventListener("load", function () {
-  //   gsap.to(".centerPiece .gridBlock", { autoAlpha: 1, duration: 0.5 });
-  // });
-
-  // bigImg.src = `https://picsum.photos/${size}/${size}?random=50`;
-  // console.log(bigImg);
   return (
-    <div>
-      <h1 className="header-section">
-        Scroll down to see a photo gallery being revealed
-      </h1>
+    <div className="projectsContainer">
       <div className="gridContainer">
         <div className="grid">
           <ProjectGridLayer

@@ -1,24 +1,31 @@
+.projectsContainer {
+  width: 100%;
+  height: auto;
+}
+
 .gridContainer {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   position: relative;
 }
 
 .grid {
-  top: 150px;
+  top: calc(60vh - 30vw);
   left: 0;
-  z-index: -5;
+  z-index: -1;
   width: 70vw;
-  height: 62vw;
+  height: 103vh;
   margin: 0 calc(100vw / 20 * 3);
   position: absolute;
 }
 
 @media only screen and (max-width: 580px) {
   .grid {
-    margin: 0;
+    top: calc(80vh - 30vw);
+    margin: 0 ;
     width: 100vw;
-    height: 89.444vw;
+    height: 90vh;
+    
   }
 }
 
@@ -42,10 +49,6 @@
   transform-origin: 44.951% 50%;
   z-index: -1;
 }
-
-/* .gridLayer:nth-child(1) {
-  z-index: 2;
-} */
 
 
 .gridLayer:nth-child(1) .gridBlock {
@@ -104,10 +107,6 @@
     height: 35.444vw;
   }
 }
-/* .gridLayer:nth-child(5) {
-  z-index: 1;
-} */
-
 
 .gridLayer:nth-child(5) .gridBlock {
   top: 17.5vw;
@@ -115,6 +114,7 @@
   width: 20vw;
   height: 15vw;
 }
+
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(5) .gridBlock {
     top: 32.278vw;
@@ -123,26 +123,20 @@
     height: 15.278vw;
   }
 }
-/* .gridLayer:nth-child(5) a {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.gridLayer:nth-child(5) svg {
-  width: 1.75vw;
-} */
+
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(5) svg {
     width: 4.722vw;
   }
 }
+
 .gridLayer:nth-child(6) .gridBlock {
   left: 50vw;
   top: 36vw;
   width: 15vw;
   height: 21vw;
 }
+
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(6) .gridBlock {
     top: 51.889vw;
