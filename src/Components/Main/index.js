@@ -2,6 +2,7 @@ import React from "react";
 import SocialMedia from "../SocialMedia";
 import Introduction from "../Introduction";
 import Projects from "../Projects";
+import ScrollAdv from "../ScrollAdv";
 import css from "./Main.module.css"
 // import Footer from "../Footer";
 
@@ -10,8 +11,8 @@ function Main() {
   <main className={css.mainContainer}>
     <SocialMedia />
     <Introduction />
+    <ScrollAdv />
     <Projects />
-    {/* <Footer /> */}
   </main>
   )
 }
