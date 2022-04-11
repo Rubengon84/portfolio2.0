@@ -1,12 +1,14 @@
 .projectsContainer {
   width: 100%;
   height: auto;
+
 }
 
 .gridContainer {
   width: 100vw;
   height: auto;
   position: relative;
+
 }
 
 .grid {
@@ -17,6 +19,7 @@
   height: 103vh;
   margin: 0 calc(100vw / 20 * 3);
   position: absolute;
+
 }
 
 @media only screen and (max-width: 580px) {
