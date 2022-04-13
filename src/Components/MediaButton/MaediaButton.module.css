@@ -21,3 +21,7 @@
 .logoImage:hover {
   width: 80%;
 }
+
+.imageLogoContainer:hover {
+  background-color: aquamarine;
+}

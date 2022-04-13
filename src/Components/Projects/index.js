@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
-import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Projects.css";
 import ProjectGridLayer from "../ProjectGridLayer";
@@ -20,7 +19,10 @@ import redditImage from "../../Images/projects/reddit.PNG";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Projects() {
+function Projects({ changeArrows }) {
+  const [scrollFinish, setScrollFinish] = useState(false);
+
+  scrollFinish ? changeArrows("up") : changeArrows("down");
 
   useEffect(() => {
     gsap
@@ -34,6 +36,10 @@ function Projects() {
           },
           onLeave: () => {
             changeClasses("gridLayer", "active");
+            setScrollFinish(true);
+          },
+          onLeaveBack: () => {
+            setScrollFinish(false);
           },
           scrub: true,
           pin: ".grid",
