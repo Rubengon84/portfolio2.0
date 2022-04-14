@@ -14,6 +14,7 @@ function Main() {
     setScrollArrows(value);
   }
 
+
   return ( 
   <main className={css.mainContainer}>
     <SocialMedia />
