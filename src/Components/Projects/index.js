@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Projects.css";
 import ProjectGridLayer from "../ProjectGridLayer";
-import { changeClasses } from "../../HelperFunctions";
+import { changeClasses, changeText } from "../../HelperFunctions";
 
 // Load Images for the showroom
 import apptivityImage from "../../Images/projects/apptivity.PNG";
@@ -15,15 +15,9 @@ import photoShowroomImage from "../../Images/projects/photo-showroom.PNG";
 import mastermindImage from "../../Images/projects/masterMind.PNG";
 import redditImage from "../../Images/projects/reddit.PNG";
 
-
-
 gsap.registerPlugin(ScrollTrigger);
 
-function Projects({ changeArrows }) {
-  const [scrollFinish, setScrollFinish] = useState(false);
-
-  scrollFinish ? changeArrows("up") : changeArrows("down");
-
+function Projects() {
   useEffect(() => {
     gsap
       .timeline({
@@ -36,10 +30,14 @@ function Projects({ changeArrows }) {
           },
           onLeave: () => {
             changeClasses("gridLayer", "active");
-            setScrollFinish(true);
+            changeClasses("scrollContainer", "scrollContainerUp");
+            changeClasses("arrowsDown", "arrowsUp");
+            changeText("scrollSpan", "Home");
           },
           onLeaveBack: () => {
-            setScrollFinish(false);
+            changeClasses("scrollContainer", "");
+            changeClasses("arrowsDown", "");
+            changeText("scrollSpan", "Projects");
           },
           scrub: true,
           pin: ".grid",

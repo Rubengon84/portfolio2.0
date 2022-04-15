@@ -5,3 +5,8 @@ export function changeClasses(actualClass, newClass = "") {
     element.className = `${actualClass} ${newClass}`;
   });
 }
+
+export function changeText(actualClass, text) {
+  const element = document.querySelector(`.${actualClass}`);
+  element.innerText = `${text}`;
+}

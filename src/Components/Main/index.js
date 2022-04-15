@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import SocialMedia from "../SocialMedia";
 import Introduction from "../Introduction";
 import Projects from "../Projects";
@@ -8,19 +8,12 @@ import css from "./Main.module.css"
 
 function Main() {
 
-  const [scrollArrows, setScrollArrows] = useState("down");
-  
-  function changeArrows(value) {
-    setScrollArrows(value);
-  }
-
-
   return ( 
   <main className={css.mainContainer}>
     <SocialMedia />
+    <ScrollAdv />
     <Introduction />
-    <ScrollAdv scrollArrows={scrollArrows} />
-    <Projects changeArrows={changeArrows} />
+    <Projects />
   </main>
   )
 }

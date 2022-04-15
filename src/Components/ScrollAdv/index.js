@@ -1,33 +1,20 @@
-import React from 'react'
-import css from "./ScrollAdv.module.css"
+import React from "react";
+import "./scrollAdv.css";
 
-function ScrollAdv( {scrollArrows}) {
+function ScrollAdv() {
+  // console.log(document.querySelector("html").scrollHeight);
 
-// console.log(document.querySelector("html").scrollHeight);
-
-// function scrollBar() {
-//   window.scrollTo(0, 1500);
-// }
+  // function scrollBar() {
+  //   window.scrollTo(0, 1500);
+  // }
 
   return (
     <div
-      className={
-        scrollArrows === "down"
-          ? `${css.scrollContainer}`
-          : `${css.scrollContainer} ${css.scrollContainerUp}`
-      }
+      className="scrollContainer"
       // onClick= {() => {scrollBar()}}
     >
-      <span className={css.scrollSpan}>
-        {scrollArrows === "down" ? "Projects" : "Home"}
-      </span>
-      <div
-        className={
-          scrollArrows === "down"
-            ? `${css.arrowsDown}`
-            : `${css.arrowsDown} ${css.arrowsUp}`
-        }
-      >
+      <span className="scrollSpan">Projects</span>
+      <div className="arrowsDown">
         <span></span>
         <span></span>
         <span></span>
@@ -36,4 +23,4 @@ function ScrollAdv( {scrollArrows}) {
   );
 }
 
-export default ScrollAdv
+export default ScrollAdv;
