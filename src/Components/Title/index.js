@@ -1,6 +1,7 @@
 import React from "react";
 import css from "./Title.module.css"
 
+// Title component for the Title of the react SPA, responsive to any device size.
 function Title() {
   return (
     <div className={css.titleContainer}>

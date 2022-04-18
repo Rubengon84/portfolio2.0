@@ -17,7 +17,9 @@ import redditImage from "../../Images/projects/reddit.PNG";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Component to hold all the projects links and make the animation of shrink or grow when user scrolls. 
 function Projects() {
+  // UseEffect to create and load an animation timeline with scrollTrigger to shrink or grow the projects.
   useEffect(() => {
     gsap
       .timeline({
@@ -60,7 +62,7 @@ function Projects() {
 
   return (
     <div className="projectsContainer">
-    <h2 className="projectTitle">Projects</h2>
+      <h2 className="projectTitle">Projects</h2>
       <div className="gridContainer">
         <div className="grid">
           <ProjectGridLayer
@@ -80,7 +82,6 @@ function Projects() {
             centerPiece={true}
             projectImage={apptivityImage}
           />
-          {/* <ProjectGridLayer /> */}
           <ProjectGridLayer
             link={"https://cats-api-table.herokuapp.com/"}
             projectImage={catsImage}

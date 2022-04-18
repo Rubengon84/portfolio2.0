@@ -6,6 +6,7 @@ import mailLogo from "../../Images/Icons/mail.png";
 import githubLogo from "../../Images/Icons/github-logo.png";
 import css from "./SocialMedia.module.css";
 
+// Container component to hold all the social media buttons.
 function SocialMedia() {
   return (
     <aside className={css.socialMediaContainer}>
@@ -19,8 +20,11 @@ function SocialMedia() {
         link="https://github.com/Rubengon84"
         text="GitHub"
       />
-      <MediaButton image={mailLogo} link="mailto:rubengon.uk@gmail.com"
-       text="Mail to Ruben Gonzalez" />
+      <MediaButton
+        image={mailLogo}
+        link="mailto:rubengon.uk@gmail.com"
+        text="Mail to Ruben Gonzalez"
+      />
       <MediaButton
         image={cvLogo}
         link="https://drive.google.com/file/d/1cY4ZltQA8iNMpazutv9qRDod0ha7FD8H/view?usp=sharing"

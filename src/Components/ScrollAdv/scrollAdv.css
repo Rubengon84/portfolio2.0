@@ -18,10 +18,10 @@
 
 .scrollSpan {
   font-weight: bold;
-  color: green;
+  color: aquamarine;
   font-size: clamp(1rem, 2vw, 2rem);
   vertical-align: top;
-  animation: prjectsAnimation 2s infinite;
+  animation: projectsAnimation 2s infinite;
   animation-delay: 1s;
 }
 
@@ -98,7 +98,7 @@
   }
 }
 
-@keyframes prjectsAnimation {
+@keyframes projectsAnimation {
   0% {
     opacity: 0.5;
   }

@@ -5,6 +5,7 @@ import Projects from "../Projects";
 import ScrollAdv from "../ScrollAdv";
 import css from "./Main.module.css"
 
+// The main component contains all the components of the SPA except the Footer. 
 function Main() {
 
   return ( 
