@@ -1,14 +1,12 @@
 .projectsContainer {
   width: 100%;
   height: auto;
-
 }
 
 .gridContainer {
   width: 100vw;
   height: auto;
   position: relative;
-
 }
 
 .grid {
@@ -19,16 +17,14 @@
   height: 103vh;
   margin: 0 calc(100vw / 20 * 3);
   position: absolute;
-
 }
 
 @media only screen and (max-width: 580px) {
   .grid {
     top: calc(80vh - 30vw);
-    margin: 0 ;
+    margin: 0;
     width: 100vw;
     height: 90vh;
-    
   }
 }
 
@@ -52,7 +48,6 @@
   transform-origin: 44.951% 50%;
   z-index: -1;
 }
-
 
 .gridLayer:nth-child(1) .gridBlock {
   top: 0vw;
@@ -158,13 +153,12 @@
 
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(7) .gridBlock {
-   top: 56.889vw;
-   left: 7vw;
-   width: 29.389vw;
-   height: 21.389vw;
+    top: 56.889vw;
+    left: 7vw;
+    width: 29.389vw;
+    height: 21.389vw;
   }
 }
-
 
 .gridLayer:nth-child(8) .gridBlock {
   top: 49.889vw;
@@ -174,10 +168,10 @@
 }
 @media only screen and (max-width: 580px) {
   .gridLayer:nth-child(8) .gridBlock {
-   top: 70.889vw;
-   left: 40vw;
-   width: 28vw;
-   height: 12.389vw;
+    top: 70.889vw;
+    left: 40vw;
+    width: 28vw;
+    height: 12.389vw;
   }
 }
 /* .gridLayer:nth-child(9) .gridBlock {
@@ -195,18 +189,42 @@
   }
 } */
 
- .active {
-  width:min-content ;
+.active {
+  width: min-content;
   height: min-content;
   z-index: 3;
- }
+}
 
- .active img:hover {
-   border: 2px solid blue;
- }
+.active img {
+  transition: border 0.3s;
+}
+
+.active img:hover {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 3px solid aquamarine;
+}
 
 .gridBlock {
   display: block;
   position: absolute;
   z-index: 6;
+}
+
+.projectTitle {
+  display: none;
+  position: fixed;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  font-weight: bold;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: rgba(68, 67, 67, 0.498);
+  color: white;
+  top: 2%;
+  left: 3%;
+}
+
+.projectTitleVisible {
+  display: block;
 }

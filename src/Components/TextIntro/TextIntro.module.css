@@ -1,0 +1,11 @@
+
+.textContainer {
+  width: 70%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.textContainer p {
+  color: white;
+  line-height: 1.3rem;
+}

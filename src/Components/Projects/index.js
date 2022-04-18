@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Projects.css";
 import ProjectGridLayer from "../ProjectGridLayer";
-import { changeClasses } from "../../HelperFunctions";
+import { changeClasses, changeText } from "../../HelperFunctions";
 
 // Load Images for the showroom
 import apptivityImage from "../../Images/projects/apptivity.PNG";
@@ -16,12 +15,11 @@ import photoShowroomImage from "../../Images/projects/photo-showroom.PNG";
 import mastermindImage from "../../Images/projects/masterMind.PNG";
 import redditImage from "../../Images/projects/reddit.PNG";
 
-
-
 gsap.registerPlugin(ScrollTrigger);
 
+// Component to hold all the projects links and make the animation of shrink or grow when user scrolls. 
 function Projects() {
-
+  // UseEffect to create and load an animation timeline with scrollTrigger to shrink or grow the projects.
   useEffect(() => {
     gsap
       .timeline({
@@ -34,6 +32,16 @@ function Projects() {
           },
           onLeave: () => {
             changeClasses("gridLayer", "active");
+            changeClasses("scrollContainer", "scrollContainerUp");
+            changeClasses("arrowsDown", "arrowsUp");
+            changeClasses("projectTitle", "projectTitleVisible");
+            changeText("scrollSpan", "Home");
+          },
+          onLeaveBack: () => {
+            changeClasses("scrollContainer", "");
+            changeClasses("arrowsDown", "");
+            changeClasses("projectTitle", "");
+            changeText("scrollSpan", "Projects");
           },
           scrub: true,
           pin: ".grid",
@@ -54,6 +62,7 @@ function Projects() {
 
   return (
     <div className="projectsContainer">
+      <h2 className="projectTitle">Projects</h2>
       <div className="gridContainer">
         <div className="grid">
           <ProjectGridLayer
@@ -73,7 +82,6 @@ function Projects() {
             centerPiece={true}
             projectImage={apptivityImage}
           />
-          {/* <ProjectGridLayer /> */}
           <ProjectGridLayer
             link={"https://cats-api-table.herokuapp.com/"}
             projectImage={catsImage}
