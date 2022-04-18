@@ -1,19 +1,23 @@
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  width: 100%;
-  background-color: darkblue;
+  width: auto;
+  background-color: rgba(68, 67, 67, 0.498);
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  padding: 0 0.5rem;
+  border-radius: 0.3rem;
 }
 
 .footer p, span {
+  font-size: 1rem;
   color: white;
 }
 
 .letterR {
   font-size: 1.8rem;
-  vertical-align:sub;
+  vertical-align:middle;
+  margin-right: -0.1rem;
 }
 

@@ -4,7 +4,6 @@ import Introduction from "../Introduction";
 import Projects from "../Projects";
 import ScrollAdv from "../ScrollAdv";
 import css from "./Main.module.css"
-// import Footer from "../Footer";
 
 function Main() {
 

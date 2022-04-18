@@ -32,11 +32,13 @@ function Projects() {
             changeClasses("gridLayer", "active");
             changeClasses("scrollContainer", "scrollContainerUp");
             changeClasses("arrowsDown", "arrowsUp");
+            changeClasses("projectTitle", "projectTitleVisible");
             changeText("scrollSpan", "Home");
           },
           onLeaveBack: () => {
             changeClasses("scrollContainer", "");
             changeClasses("arrowsDown", "");
+            changeClasses("projectTitle", "");
             changeText("scrollSpan", "Projects");
           },
           scrub: true,
@@ -58,6 +60,7 @@ function Projects() {
 
   return (
     <div className="projectsContainer">
+    <h2 className="projectTitle">Projects</h2>
       <div className="gridContainer">
         <div className="grid">
           <ProjectGridLayer
