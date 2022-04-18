@@ -4,14 +4,15 @@ import Introduction from "../Introduction";
 import Projects from "../Projects";
 import ScrollAdv from "../ScrollAdv";
 import css from "./Main.module.css"
-// import Footer from "../Footer";
 
+// The main component contains all the components of the SPA except the Footer. 
 function Main() {
+
   return ( 
   <main className={css.mainContainer}>
     <SocialMedia />
-    <Introduction />
     <ScrollAdv />
+    <Introduction />
     <Projects />
   </main>
   )

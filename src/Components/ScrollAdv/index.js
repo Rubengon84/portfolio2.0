@@ -1,11 +1,15 @@
-import React from 'react'
-import css from "./ScrollAdv.module.css"
+import React from "react";
+import "./scrollAdv.css";
 
+// Component for showing the option of scrolling down or up on the right side of the screen.
 function ScrollAdv() {
+
   return (
-    <div className={css.scrollContainer}>
-      <span className={css.scrollSpan}>Projects</span>
-      <div className={css.scrollArrows}>
+    <div
+      className="scrollContainer"
+    >
+      <span className="scrollSpan">Projects</span>
+      <div className="arrowsDown">
         <span></span>
         <span></span>
         <span></span>
@@ -14,4 +18,4 @@ function ScrollAdv() {
   );
 }
 
-export default ScrollAdv
+export default ScrollAdv;
