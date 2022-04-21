@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Rubengon Portfolio 2.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [MVP](#mvp)
+* [New Features](#new-features-coming)
 
-## Available Scripts
+## General Info
 
-In the project directory, you can run:
+My second portfolio project, after 1 year since I made my first portfolio, I have been role in an intense productive year with new learnings, new experiences and new projects; so it was the right time to update my portfolio and put it into practice all these new learnings. I decided to do a new React.js-portfolio designed and focussing on an attractive design, and trying to introduce more interactivity instead of large text. I following Agile development proccess, being foccused on design an develop and MVP, and advance from there adding new features and new context.  
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* React.js
+* React Gsap library
+* CSS3 | CSS-Modules
+* Netlify
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+&nbsp;
+>### MVP
 
-### `npm test`
+>This portfolio-Mvp is a react SPA focussed on an atractive responsive design with more interactivity and animations instead of large texts. The Mvp contains two different main components, Introduction and Projects. Introduction where the SPA is landing, with a bit of introduction text, and the Projects component which is holding all the projects links images, giving to the user access to all of them. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+&nbsp;
+>#### - MVP Wireframe
 
-### `npm run build`
+>![Wireframe](/src/Images/Readme-images/portfolio%202.0%20MVP%20wireframe.PNG)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+&nbsp;
+>### - React Componenet Diagram
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+>![React Diagram](/src/Images/Readme-images/MVP%20component-diagram.drawio.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+&nbsp;
+### New Features coming
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Projects Description Component
+* User Comments
