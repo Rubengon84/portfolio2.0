@@ -1,11 +1,20 @@
 import React from 'react'
+import { projectsData } from '../../Data'
 import css from "./ProjectsDesk.module.css"
 
 
-function ProjectsDesk() {
+function ProjectsDesk({projectIndex}) {
+ 
+
   return (
-    <p className={css.projectsDesk}>ProjectsDesk</p>
-  )
+    <div className={css.projectsDesk}>
+      <p>ProjectsDesk</p>
+      <img
+        src={projectsData[projectIndex].image}
+        alt={projectsData[projectIndex].title}
+      />
+    </div>
+  );
 }
 
 export default ProjectsDesk

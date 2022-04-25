@@ -4,12 +4,12 @@ import Projects from "../Projects";
 import ScrollAdv from "../ScrollAdv";
 import css from "./Home.module.css";
 
-function Home() {
+function Home({getProjectIndex}) {
   return (
     <div className={css.homeContainer}>
       <ScrollAdv />
       <Introduction />
-      <Projects />
+      <Projects getProjectIndex={getProjectIndex}/>
     </div>
   );
 }
