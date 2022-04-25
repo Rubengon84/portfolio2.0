@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Projects.css";
 import ProjectGridLayer from "../ProjectGridLayer";
 import { changeClasses, changeText } from "../../HelperFunctions";
+import { projectsData } from "../../Data";
 
 // Load Images for the showroom
 import apptivityImage from "../../Images/projects/apptivity.PNG";
@@ -65,7 +66,17 @@ function Projects() {
       <h2 className="projectTitle">Projects</h2>
       <div className="gridContainer">
         <div className="grid">
-          <ProjectGridLayer
+          {projectsData.map(project => {
+            return(
+              <ProjectGridLayer
+                data={project}
+                projectImage={project.image}
+                centerPiece={project.centerPiece ? true : false}
+              /> 
+            )
+          })
+          }
+          {/* <ProjectGridLayer
             link={"https://reddit-jimmy.netlify.app/"}
             projectImage={redditImage}
           />
@@ -97,7 +108,7 @@ function Projects() {
           <ProjectGridLayer
             link={"https://wikipigeons.netlify.app/"}
             projectImage={pigeonsImage}
-          />
+          /> */}
         </div>
       </div>
     </div>
