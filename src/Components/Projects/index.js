@@ -4,21 +4,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./Projects.css";
 import ProjectGridLayer from "../ProjectGridLayer";
 import { changeClasses, changeText } from "../../HelperFunctions";
-
-// Load Images for the showroom
-import apptivityImage from "../../Images/projects/apptivity.PNG";
-import portfolioImage from "../../Images/projects/portfolio.PNG";
-import catsImage from "../../Images/projects/cats.PNG";
-import rugImage from "../../Images/projects/rug.PNG";
-import pigeonsImage from "../../Images/projects/pigeons.PNG";
-import photoShowroomImage from "../../Images/projects/photo-showroom.PNG";
-import mastermindImage from "../../Images/projects/masterMind.PNG";
-import redditImage from "../../Images/projects/reddit.PNG";
+import { projectsData } from "../../Data";
 
 gsap.registerPlugin(ScrollTrigger);
 
 // Component to hold all the projects links and make the animation of shrink or grow when user scrolls. 
-function Projects() {
+function Projects({getProjectIndex}) {
   // UseEffect to create and load an animation timeline with scrollTrigger to shrink or grow the projects.
   useEffect(() => {
     gsap
@@ -65,39 +56,18 @@ function Projects() {
       <h2 className="projectTitle">Projects</h2>
       <div className="gridContainer">
         <div className="grid">
-          <ProjectGridLayer
-            link={"https://reddit-jimmy.netlify.app/"}
-            projectImage={redditImage}
-          />
-          <ProjectGridLayer
-            link={"https://rubengon84.github.io/"}
-            projectImage={portfolioImage}
-          />
-          <ProjectGridLayer
-            link={"https://dreamy-mcnulty-895324.netlify.app/"}
-            projectImage={mastermindImage}
-          />
-          <ProjectGridLayer
-            link={"https://apptivity-app.netlify.app"}
-            centerPiece={true}
-            projectImage={apptivityImage}
-          />
-          <ProjectGridLayer
-            link={"https://cats-api-table.herokuapp.com/"}
-            projectImage={catsImage}
-          />
-          <ProjectGridLayer
-            link={"https://rug-website-project.netlify.app/"}
-            projectImage={rugImage}
-          />
-          <ProjectGridLayer
-            link={"https://ivan-gallery.herokuapp.com/"}
-            projectImage={photoShowroomImage}
-          />
-          <ProjectGridLayer
-            link={"https://wikipigeons.netlify.app/"}
-            projectImage={pigeonsImage}
-          />
+          {projectsData.map( (project, index) => {
+            return(
+              <ProjectGridLayer
+                getProjectIndex={getProjectIndex}
+                projectImage={project.image}
+                centerPiece={project.centerPiece ? true : false}
+                index={index}
+                key={index}
+              /> 
+            )
+          })
+          }
         </div>
       </div>
     </div>
