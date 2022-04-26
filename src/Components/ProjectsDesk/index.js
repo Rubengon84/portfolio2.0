@@ -1,20 +1,50 @@
-import React from 'react'
-import { projectsData } from '../../Data'
-import css from "./ProjectsDesk.module.css"
+import React from "react";
+import { Slide } from "react-slideshow-image";
+import { projectsData } from "../../Data";
+import ProjectSlide from "../ProjectSlide";
+import "react-slideshow-image/dist/styles.css";
+import css from "./ProjectsDesk.module.css";
 
-
-function ProjectsDesk({projectIndex}) {
- 
-
+function ProjectsDesk({ projectIndex, getProjectIndex }) {
   return (
     <div className={css.projectsDesk}>
-      <p>ProjectsDesk</p>
-      <img
-        src={projectsData[projectIndex].image}
-        alt={projectsData[projectIndex].title}
-      />
+      <Slide
+        slidesToShow={1}
+        slidesToScroll={1}
+        defaultIndex={projectIndex}
+        autoplay={false}
+        indicators={true}
+        responsive={[
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 6,
+              slidesToScroll: 1,
+            },
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1,
+            },
+          },
+        ]}
+      >
+        {projectsData.map((project, index) => {
+          return (
+            <ProjectSlide
+              key={index}
+              index={index}
+              projectImage={project.image}
+              projectAddress={project.address}
+              getProjectIndex={getProjectIndex}
+            />
+          );
+        })}
+      </Slide>
     </div>
   );
 }
 
-export default ProjectsDesk
+export default ProjectsDesk;
