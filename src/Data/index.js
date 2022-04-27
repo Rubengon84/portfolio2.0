@@ -10,42 +10,86 @@ import redditImage from "../Images/projects/reddit.PNG";
 export const projectsData = [
   {
     title: "Reddit-Image",
+    description: `This is my first React & React-Redux App create from scratch, totally functional, getting the data from reddit api, and displayed in a react responsive SPA.`,
+    links: {
+      gitHub: "https://github.com/Rubengon84/reddit-react",
+      deployed: "https://reddit-jimmy.netlify.app/",
+    },
     address: "../../Images/projects/reddit.PNG",
     image: redditImage,
   },
   {
     title: "Portfolio",
+    description: `This is my large first website project, trying to be focus on make it responsive of any device’s size using CSS-Grid and Flex box, interactive to the user, and with different layouts and features. I made it in black and white at the biggening but with option button to make it colorful, Only used HTML, CSS and plain JavaScript, not any modules used, all the features are designed and coded from the scratch.`,
+    links: {
+      gitHub: "https://github.com/Rubengon84/Rubengon84.github.io",
+      deployed: "https://rubengon84.github.io/",
+    },
     address: "../../Images/projects/portfolio.PNG",
     image: portfolioImage,
   },
   {
     title: "Master-Mind",
+    description: `First team week project in School of Code, Using Agile-Scrum development process, divided it in two repositories, back-end, Rest-Api express server with a postgreSQl database hosted in heroku, and Front-end react SPA hosted on netlify`,
+    links: {
+      gitHub: [
+        "https://github.com/SchoolOfCode/national-project-week-repo-2-the-room-23",
+        "https://github.com/SchoolOfCode/national-project-week-the-room-23",
+      ],
+      deployed: "https://dreamy-mcnulty-895324.netlify.app/",
+    },
     address: "../../Images/projects/masterMind.PNG",
     image: mastermindImage,
   },
   {
     title: "Apptivity",
+    description: `Final large team project in School of Code, Using Agile development process with an hybrid Scrum-Kamban tecqniques. Full planning process with Diney Ideation, brain storming, user-personas, user-stories, flow-diagrams, sketch, wireframes... . Project devided it in a front-end part with a React SPA, focused it on a responsive, clear and interactive design, with a completed unit test and end-to-end test (Cypress) implemented. Back-end express Rest-API with postgreSQl database hosted in Heroku and completed CI test with supertest, Github Actions, and Postmant CI tests.       `,
+    links: {
+      gitHub:[
+        "https://github.com/SchoolOfCode/final-project-front-end-hack-to-the-future","https://github.com/SchoolOfCode/final-project-api-hack-to-the-future"],
+      deployed: "https://apptivity-app.netlify.app/",
+    },
     address: "../../Images/projects/apptivity.PNG",
     image: apptivityImage,
     centerPiece: true,
   },
   {
     title: "Cats-ApiRest",
+    description: `This is my first React & React-Redux App create from scratch, totally functional, getting the data from reddit api, and displayed in a react responsive SPA.`,
+    links: {
+      gitHub: "https://github.com/Rubengon84/reddit-react",
+      deployed: "https://reddit-jimmy.netlify.app/",
+    },
     address: "../../Images/projects/cats.PNG",
     image: catsImage,
   },
   {
     title: "Rug-Website",
+    description: `This is my first React & React-Redux App create from scratch, totally functional, getting the data from reddit api, and displayed in a react responsive SPA.`,
+    links: {
+      gitHub: "https://github.com/Rubengon84/reddit-react",
+      deployed: "https://reddit-jimmy.netlify.app/",
+    },
     address: "../../Images/projects/rug.PNG",
     image: rugImage,
   },
   {
     title: "Photo-Showroom",
+    description: `This is my first React & React-Redux App create from scratch, totally functional, getting the data from reddit api, and displayed in a react responsive SPA.`,
+    links: {
+      gitHub: "https://github.com/Rubengon84/reddit-react",
+      deployed: "https://reddit-jimmy.netlify.app/",
+    },
     address: "../../Images/projects/photo-showroom.PNG",
     image: photoShowroomImage,
   },
   {
     title: "Pigeons-Authentification",
+    description: `This is my first React & React-Redux App create from scratch, totally functional, getting the data from reddit api, and displayed in a react responsive SPA.`,
+    links: {
+      gitHub: "https://github.com/Rubengon84/reddit-react",
+      deployed: "https://reddit-jimmy.netlify.app/",
+    },
     address: "../../Images/projects/pigeons.PNG",
     image: pigeonsImage,
   },

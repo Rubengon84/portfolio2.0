@@ -1,6 +1,7 @@
 import React from "react";
 import { Slide } from "react-slideshow-image";
 import { projectsData } from "../../Data";
+import ProjectExplanation from "../ProjectExplanation";
 import ProjectSlide from "../ProjectSlide";
 import "react-slideshow-image/dist/styles.css";
 import css from "./ProjectsDesk.module.css";
@@ -43,6 +44,8 @@ function ProjectsDesk({ projectIndex, getProjectIndex }) {
           );
         })}
       </Slide>
+      <h2>{projectsData[projectIndex].title}</h2>
+      <ProjectExplanation projectData={projectsData[projectIndex]} />
     </div>
   );
 }
