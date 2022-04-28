@@ -38,6 +38,7 @@ function ProjectsDesk({ projectIndex, getProjectIndex }) {
               key={index}
               index={index}
               projectImage={project.image}
+              projectTitle={project.title}
               projectAddress={project.address}
               getProjectIndex={getProjectIndex}
             />
