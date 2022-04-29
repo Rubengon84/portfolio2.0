@@ -1,11 +1,23 @@
 import React from "react";
 import css from "./ProjectSlide.module.css";
 
-function ProjectSlide({projectImage, getProjectIndex, index, projectTitle}) {
+function ProjectSlide({ projectImage, getProjectIndex, index, projectTitle, selected }) {
   return (
-    <div className={css.eachSlide}>
+    <div
+      className={
+        selected ? `${css.eachSlide} ${css.selected}` : `${css.eachSlide}`
+      }
+    >
       {/* <img src={projectImage} alt={projectImage}/> */}
-      <div style={{ backgroundImage: `url(${projectImage})` }} onClick={() => getProjectIndex(index)}></div>
+      <div
+        className={css.image}
+        style={{ backgroundImage: `url(${projectImage})` }}
+        onClick={() => getProjectIndex(index)}
+      >
+        <div
+          className={selected ? "" : `${css.slideBlind}`}
+        ></div>
+      </div>
       <span>{projectTitle}</span>
     </div>
   );

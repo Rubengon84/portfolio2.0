@@ -1,9 +1,13 @@
 import React from "react";
 import css from "./ProjectExplanation.module.css";
+import ButtonIcon from "../ButtonIcon";
+import gitRepo from "../../Images/Icons/git-repo.png"
+import linkImage from "../../Images/Icons/website-icon.png"
 
 function ProjectExplanation({ projectData }) {
   return (
     <section className={css.explanationContainer}>
+      <h2>{projectData.title}</h2>
       <div className={css.description}>
         <p>{projectData.description}</p>
       </div>
@@ -15,14 +19,12 @@ function ProjectExplanation({ projectData }) {
         <div>
           <div>
             <h3>Links</h3>
-            <a href={projectData.links.deployed}>
-              <span>{projectData.links.deployed}</span>
-            </a>
+            <ButtonIcon link={projectData.links.deployed} image={linkImage} />
             <ul>
               {projectData.links.gitHub.map((link, index) => {
                 return (
                   <li key={index}>
-                    <a href={link}>{link}</a>
+                    <ButtonIcon link={link} image={gitRepo} />
                   </li>
                 );
               })}

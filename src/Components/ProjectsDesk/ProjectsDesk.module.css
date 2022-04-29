@@ -1,7 +1,11 @@
 .projectsDesk {
   margin: 0 auto;
   width: 80%;
-  height: 100vh;
-  border: 2px solid red;
+  height: auto;
+}
+
+.slideContainer {
+ border: 2px solid rgba(128, 128, 128, 0.358);;
+ border-radius: 0.5rem;
 }
 

@@ -15,18 +15,31 @@ function ProjectsDesk({ projectIndex, getProjectIndex }) {
         defaultIndex={projectIndex}
         autoplay={false}
         indicators={true}
+        onChange={ window.innerWidth <= 500? (previous, next) => {
+                getProjectIndex(previous);
+                getProjectIndex(next);
+              }: ""
+        }
+        cssClass={css.slideContainer}
         responsive={[
           {
             breakpoint: 1024,
             settings: {
               slidesToShow: 6,
+              slidesToScroll: 3,
+            },
+          },
+          {
+            breakpoint: 750,
+            settings: {
+              slidesToShow: 3,
               slidesToScroll: 1,
             },
           },
           {
             breakpoint: 500,
             settings: {
-              slidesToShow: 4,
+              slidesToShow: 2,
               slidesToScroll: 1,
             },
           },
@@ -37,6 +50,7 @@ function ProjectsDesk({ projectIndex, getProjectIndex }) {
             <ProjectSlide
               key={index}
               index={index}
+              selected={projectIndex === index? true : false}
               projectImage={project.image}
               projectTitle={project.title}
               projectAddress={project.address}
@@ -45,7 +59,6 @@ function ProjectsDesk({ projectIndex, getProjectIndex }) {
           );
         })}
       </Slide>
-      <h2>{projectsData[projectIndex].title}</h2>
       <ProjectExplanation projectData={projectsData[projectIndex]} />
     </div>
   );
