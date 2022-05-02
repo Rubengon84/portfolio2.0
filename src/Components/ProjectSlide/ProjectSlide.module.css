@@ -1,8 +1,13 @@
+
+.eachSlide {
+height: auto;
+}
+
 .selected {
   border: 2px solid aquamarine;
 }
 
-.image {
+.slideImage {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,8 +21,6 @@
 }
 
 .eachSlide span {
-  padding: 1rem;
-  font-size: 1rem;
   text-align: center;
 }
 
@@ -28,11 +31,11 @@
   transition: height 1s;
 }
 
-.image:hover > .slideBlind {
+.slideImage:hover > .slideBlind {
   height: 0;
 }
 
-.image:hover {
+.slideImage:hover {
   cursor: pointer;
 }
 

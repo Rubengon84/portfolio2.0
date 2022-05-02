@@ -1,3 +1,5 @@
+
+// Projects Images
 import apptivityImage from "../Images/projects/apptivity.PNG";
 import portfolioImage from "../Images/projects/portfolio.PNG";
 import catsImage from "../Images/projects/cats.PNG";
@@ -6,6 +8,30 @@ import pigeonsImage from "../Images/projects/pigeons.PNG";
 import photoShowroomImage from "../Images/projects/photo-showroom.PNG";
 import mastermindImage from "../Images/projects/masterMind.PNG";
 import redditImage from "../Images/projects/reddit.PNG";
+/******************************/
+
+//Tech logo images
+import agile from "../Images/Tech Logos/agile.png";
+import jsLogo from "../Images/Tech Logos/JavaScript_Logo.png";
+import css3Logo from "../Images/Tech Logos/css-3-logo.png";
+import htmlLogo from "../Images/Tech Logos/html5.png";
+import frontEndLogo from "../Images/Tech Logos/front-end-dev-languages.png";
+import auth0Logo from "../Images/Tech Logos/auth0-logo.png";
+import cypressLogo from "../Images/Tech Logos/Cypress.png";
+import expressLogo from "../Images/Tech Logos/express.png";
+import figmaLogo from "../Images/Tech Logos/Figma.jpg";
+import gitHubActionsLogo from "../Images/Tech Logos/github-actions.png";
+import gitHubLogo from "../Images/Tech Logos/GitHub-Logo.png";
+import herokuLogo from "../Images/Tech Logos/heroku.png";
+import jestLogo from "../Images/Tech Logos/jest.png";
+import jqueryLogo from "../Images/Tech Logos/jquery.png";
+import netlifyLogo from "../Images/Tech Logos/Netlify.png";
+import nodeLogo from "../Images/Tech Logos/nodejs.jpg";
+import postgresSQLLogo from "../Images/Tech Logos/postgresSQL.png";
+import postmanLogo from "../Images/Tech Logos/postman.png";
+import reactLogo from "../Images/Tech Logos/react.png";
+import reduxLogo from "../Images/Tech Logos/Redux.png";
+/*******************************/
 
 export const projectsData = [
   {
@@ -17,6 +43,7 @@ export const projectsData = [
     },
     address: "../../Images/projects/reddit.PNG",
     image: redditImage,
+    techStack: ["frontEnd", "react", "redux", "gitHub"],
   },
   {
     title: "Portfolio",
@@ -27,6 +54,7 @@ export const projectsData = [
     },
     address: "../../Images/projects/portfolio.PNG",
     image: portfolioImage,
+    techStack: ["html", "css", "javaScript", "gitHub"],
   },
   {
     title: "Master-Mind",
@@ -40,6 +68,17 @@ export const projectsData = [
     },
     address: "../../Images/projects/masterMind.PNG",
     image: mastermindImage,
+    techStack: [
+      "figma",
+      "agile",
+      "frontEnd",
+      "react",
+      "express",
+      "postgreSQl",
+      "heroku",
+      "netlify",
+      "gitHub",
+    ],
   },
   {
     title: "Apptivity",
@@ -54,17 +93,43 @@ export const projectsData = [
     address: "../../Images/projects/apptivity.PNG",
     image: apptivityImage,
     centerPiece: true,
+    techStack: [
+      "figma",
+      "agile",
+      "auth0",
+      "frontEnd",
+      "react",
+      "cypress",
+      "jest",
+      "express",
+      "postman",
+      "githubActions",
+      "postgreSQl",
+      "heroku",
+      "netlify",
+      "gitHub",
+    ],
   },
   {
     title: "Cats-ApiRest",
     description: `My First Rest API express server, hosted in Heroku, using PostgreSQL database with all the CRUD functionalities, with a simple webpage user platform. `,
     links: {
-      gitHub:
-        ["https://github.com/SchoolOfCode/w5_recap_sql-and-node-Rubengon84"],
+      gitHub: [
+        "https://github.com/SchoolOfCode/w5_recap_sql-and-node-Rubengon84",
+      ],
       deployed: "https://cats-api-table.herokuapp.com/",
     },
     address: "../../Images/projects/cats.PNG",
     image: catsImage,
+    techStack: [
+      "html",
+      "css",
+      "javaScript",
+      "express",
+      "postgreSQl",
+      "heroku",
+      "gitHub",
+    ],
   },
   {
     title: "Rug-Website",
@@ -75,6 +140,7 @@ export const projectsData = [
     },
     address: "../../Images/projects/rug.PNG",
     image: rugImage,
+    techStack: ["html", "css", "javaScript", "gitHub"],
   },
   {
     title: "Photo-Showroom",
@@ -85,6 +151,15 @@ export const projectsData = [
     },
     address: "../../Images/projects/photo-showroom.PNG",
     image: photoShowroomImage,
+    techStack: [
+      "html",
+      "css",
+      "javaScript",
+      "express",
+      "postgreSQl",
+      "heroku",
+      "gitHub",
+    ],
   },
   {
     title: "Pigeons-Authentification",
@@ -95,5 +170,35 @@ export const projectsData = [
     },
     address: "../../Images/projects/pigeons.PNG",
     image: pigeonsImage,
+    techStack: [
+      "auth0",
+      "frontEnd",
+      "react",
+      "express",
+      "netlify",
+      "gitHub",
+    ],
   },
 ];
+
+export const techStack = {
+  auth0: auth0Logo,
+  css3: css3Logo,
+  cypress: cypressLogo,
+  express: expressLogo,
+  figma: figmaLogo,
+  frontEnd: frontEndLogo,
+  gitHubActions: gitHubActionsLogo,
+  gitHub: gitHubLogo,
+  heroku: herokuLogo,
+  html: htmlLogo,
+  javaScript: jsLogo,
+  jest: jestLogo,
+  jquery: jqueryLogo,
+  netlify: netlifyLogo,
+  nodeJs: nodeLogo,
+  postgresSQL: postgresSQLLogo,
+  postman: postmanLogo,
+  react: reactLogo,
+  redux: reduxLogo
+}

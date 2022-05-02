@@ -10,7 +10,7 @@ function ProjectSlide({ projectImage, getProjectIndex, index, projectTitle, sele
     >
       {/* <img src={projectImage} alt={projectImage}/> */}
       <div
-        className={css.image}
+        className={css.slideImage}
         style={{ backgroundImage: `url(${projectImage})` }}
         onClick={() => getProjectIndex(index)}
       >

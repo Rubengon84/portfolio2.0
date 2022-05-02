@@ -15,6 +15,7 @@ function ProjectsDesk({ projectIndex, getProjectIndex }) {
         defaultIndex={projectIndex}
         autoplay={false}
         indicators={true}
+        canSwipe={true}
         onChange={ window.innerWidth <= 500? (previous, next) => {
                 getProjectIndex(previous);
                 getProjectIndex(next);
@@ -25,8 +26,8 @@ function ProjectsDesk({ projectIndex, getProjectIndex }) {
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 6,
-              slidesToScroll: 3,
+              slidesToShow: 5,
+              slidesToScroll: 2,
             },
           },
           {
