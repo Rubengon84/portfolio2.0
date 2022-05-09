@@ -28,11 +28,15 @@
 }
 
 .contentImage {
-  width: 70%;
+  width: 60%;
   height: 15rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
-
+.techContainer {
+  width: 40%;
+  height: auto;
+  border: 1px solid green;
+}

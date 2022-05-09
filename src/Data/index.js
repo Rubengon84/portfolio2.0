@@ -11,7 +11,7 @@ import redditImage from "../Images/projects/reddit.PNG";
 /******************************/
 
 //Tech logo images
-import agile from "../Images/Tech Logos/agile.png";
+import agileLogo from "../Images/Tech Logos/agile.png";
 import jsLogo from "../Images/Tech Logos/JavaScript_Logo.png";
 import css3Logo from "../Images/Tech Logos/css-3-logo.png";
 import htmlLogo from "../Images/Tech Logos/html5.png";
@@ -182,6 +182,7 @@ export const projectsData = [
 ];
 
 export const techStack = {
+  agile: agileLogo,
   auth0: auth0Logo,
   css3: css3Logo,
   cypress: cypressLogo,

@@ -3,6 +3,8 @@ import css from "./ProjectExplanation.module.css";
 import ButtonIcon from "../ButtonIcon";
 import gitRepo from "../../Images/Icons/git-repo.png"
 import linkImage from "../../Images/Icons/website-icon.png"
+import TechLogo from "../TechLogo";
+import { techStack } from "../../Data";
 
 function ProjectExplanation({ projectData }) {
   return (
@@ -30,8 +32,13 @@ function ProjectExplanation({ projectData }) {
               })}
             </ul>
           </div>
-          <div>
             <h3>Tech Stack</h3>
+          <div className={css.techContainer}>
+            {projectData.techStack.map((tech, index) => {
+              return(
+                <TechLogo techLogo={techStack[`${tech}`]} key={index}/>
+              )
+            })} 
           </div>
         </div>
       </div>
