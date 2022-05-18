@@ -18,27 +18,31 @@ function ProjectExplanation({ projectData }) {
           className={css.contentImage}
           style={{ backgroundImage: `url(${projectData.image})` }}
         ></div>
-        <div>
+        <div className={css.linksTechContainer}>
           <div>
             <h3>Links</h3>
-            <ButtonIcon link={projectData.links.deployed} image={linkImage} />
-            <ul>
-              {projectData.links.gitHub.map((link, index) => {
-                return (
-                  <li key={index}>
-                    <ButtonIcon link={link} image={gitRepo} />
-                  </li>
-                );
-              })}
-            </ul>
+            <div className={css.linksContainer}>
+              <ButtonIcon link={projectData.links.deployed} image={linkImage} />
+              <ul>
+                {projectData.links.gitHub.map((link, index) => {
+                  return (
+                    <li key={index}>
+                      <ButtonIcon link={link} image={gitRepo} />
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
-            <h3>Tech Stack</h3>
+          <div>
+
+          <h3>Tech Stack</h3>
           <div className={css.techContainer}>
             {projectData.techStack.map((tech, index) => {
-              return(
-                <TechLogo techLogo={techStack[`${tech}`]} key={index}/>
-              )
-            })} 
+              console.log({ tech });
+              return <TechLogo techLogo={techStack[`${tech}`]} key={index} />;
+            })}
+          </div>
           </div>
         </div>
       </div>

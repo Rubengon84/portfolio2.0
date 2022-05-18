@@ -1,0 +1,29 @@
+.toolTipText {
+  display: none;
+  border: solid 2px aquamarine;
+  width: max-content;
+  height: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.2rem;
+  position: absolute;
+  z-index: 3;
+  left: 115%;
+}
+
+.toolTipText::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent aquamarine transparent transparent;
+}
+
+.visible {
+  display: block;
+}
