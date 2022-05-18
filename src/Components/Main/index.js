@@ -20,7 +20,7 @@ function getProjectIndex(index) {
       <SocialMedia />
       <Routes>
         <Route path="/" element={<Home getProjectIndex={getProjectIndex} />} />
-        <Route path="/projects" element={<ProjectsDesk projectIndex={projectIndex} />} />
+        <Route path="/projects" element={<ProjectsDesk projectIndex={projectIndex} getProjectIndex={getProjectIndex} />} />
       </Routes>
     </main>
   );

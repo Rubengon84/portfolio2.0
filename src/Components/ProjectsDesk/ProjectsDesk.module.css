@@ -1,7 +1,11 @@
 .projectsDesk {
-  width: auto;
-  height: 100vh;
-  font-size: 4rem;
-  color: red;
-  border: 2px solid red;
+  margin: 1rem auto;
+  width:90%;
+  height: auto;
 }
+
+.slideContainer {
+ border: 2px solid rgba(128, 128, 128, 0.358);;
+ border-radius: 0.5rem;
+}
+

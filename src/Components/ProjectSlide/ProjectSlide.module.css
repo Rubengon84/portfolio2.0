@@ -1,0 +1,44 @@
+
+.eachSlide {
+height: auto;
+}
+
+.selected {
+  border: 2px solid aquamarine;
+}
+
+.slideImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 25vh;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.eachSlide span {
+  text-align: center;
+}
+
+.slideBlind {
+  width: 100%;
+  height: 160%;
+  background-color: rgba(128, 128, 128, 0.358);
+  transition: height 1s;
+}
+
+.slideImage:hover > .slideBlind {
+  height: 0;
+}
+
+.slideImage:hover {
+  cursor: pointer;
+}
+
+h2 {
+  color: white;
+}
