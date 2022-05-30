@@ -22,12 +22,16 @@ function ProjectExplanation({ projectData }) {
           <div>
             <h3>Links</h3>
             <div className={css.linksContainer}>
-              <ButtonIcon link={projectData.links.deployed} image={linkImage} />
+              <ButtonIcon link={projectData.links.deployed} image={linkImage} text={"Link to App"} />
               <ul>
                 {projectData.links.gitHub.map((link, index) => {
                   return (
                     <li key={index}>
-                      <ButtonIcon link={link} image={gitRepo} />
+                      <ButtonIcon
+                        link={link}
+                        image={gitRepo}
+                        text={"Link to Repo"}
+                      />
                     </li>
                   );
                 })}
