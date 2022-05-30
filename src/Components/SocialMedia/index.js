@@ -2,12 +2,15 @@ import React from "react";
 import MediaButton from "../MediaButton";
 import cvLogo from "../../Images/Icons/CV.png";
 import linkedidLogo from "../../Images/Icons/linkedin.png";
+import homeLogo from "../../Images/Icons/home.png";
 import mailLogo from "../../Images/Icons/mail.png";
 import githubLogo from "../../Images/Icons/github-logo.png";
 import css from "./SocialMedia.module.css";
 
 // Container component to hold all the social media buttons.
 function SocialMedia() {
+  console.log(window.location.pathname);
+
   return (
     <aside className={css.socialMediaContainer}>
       <MediaButton
@@ -30,6 +33,11 @@ function SocialMedia() {
         link="https://drive.google.com/file/d/1cY4ZltQA8iNMpazutv9qRDod0ha7FD8H/view?usp=sharing"
         text="CV"
       />
+      {window.location.pathname === "/projects" ? (
+        <MediaButton image={homeLogo} noTarget={true} link="/" text="Home" />
+      ) : (
+        ""
+      )}
     </aside>
   );
 }

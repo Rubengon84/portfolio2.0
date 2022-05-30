@@ -1,7 +1,10 @@
 .buttonIcon {
   width: 10vw;
-  height: 10vh;
+  height: 7vw;
+  max-height: 60px;
+  max-width: 90px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
+

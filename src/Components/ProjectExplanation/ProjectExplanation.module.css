@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   color: white;
-  border: 1px solid blue;
+
 }
 
 .explanationContainer h3 {
@@ -21,7 +21,7 @@
 }
 
 .description {
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   width: 100%;
   height: auto;
   color: white;
@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red;
+
 }
 
 .contentImage {
@@ -49,29 +49,51 @@
   height: auto;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  border: 1px solid skyblue;
+  align-items:flex-start;
+
 }
 
 .linksContainer {
-  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid green;
+
 }
 
 .techContainer {
-  width: 100%;
+  padding: 0.5rem;
+  width: auto;
   max-width: 600px;
   height: auto;
-  border: 1px solid green;
+
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  justify-content: space-around;
+  justify-content: center;
   align-content: space-around;
-  border: 1px solid yellow;
+
+}
+
+@media screen and (min-width: 900px) {
+  
+  .contentContainer{
+    flex-direction: row;
+  }
+
+  .linksTechContainer {
+    width: 50%;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .linksContainer {
+    flex-direction: row;
+  }
+
+  .techContainer {
+    
+  }
+
 }

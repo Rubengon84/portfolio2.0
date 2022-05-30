@@ -27,7 +27,7 @@ function ProjectsDesk({ projectIndex, getProjectIndex }) {
             breakpoint: 1024,
             settings: {
               slidesToShow: 5,
-              slidesToScroll: 2,
+              slidesToScroll: 3,
             },
           },
           {
