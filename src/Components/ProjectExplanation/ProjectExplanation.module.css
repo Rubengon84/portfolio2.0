@@ -1,0 +1,99 @@
+.explanationContainer {
+  margin: 0 auto;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+}
+
+.explanationContainer h3 {
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.explanationContainer h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.description {
+  padding: 1rem 0.5rem;
+  width: 100%;
+  height: auto;
+  color: white;
+}
+
+.contentContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.contentImage {
+  width: 100%;
+  height: 18rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.linksTechContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items:flex-start;
+
+}
+
+.linksContainer {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.techContainer {
+  padding: 0.5rem;
+  width: auto;
+  max-width: 600px;
+  height: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  align-content: space-around;
+
+}
+
+@media screen and (min-width: 900px) {
+  
+  .contentContainer{
+    flex-direction: row;
+  }
+
+  .linksTechContainer {
+    width: 50%;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .linksContainer {
+    flex-direction: row;
+  }
+
+  .techContainer {
+    
+  }
+
+}
