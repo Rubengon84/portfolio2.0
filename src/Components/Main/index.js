@@ -7,10 +7,8 @@ import css from "./Main.module.css";
 
 // The main component contains all the components of the SPA except the Footer.
 function Main() {
-
+  
 const [projectIndex, setProjectIndex] = useState(0);
-console.log(projectIndex);
-
 function getProjectIndex(index) {
   setProjectIndex(index);
 }
