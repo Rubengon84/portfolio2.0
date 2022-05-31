@@ -6,6 +6,7 @@ import css from "./Home.module.css";
 
 function Home({getProjectIndex}) {
 
+
   return (
     <div className={css.homeContainer}>
       <ScrollAdv />
