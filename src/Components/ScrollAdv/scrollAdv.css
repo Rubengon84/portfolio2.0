@@ -12,6 +12,16 @@
   transition: bottom 1s;
 }
 
+.scrollContainer:hover {
+  border: 3px solid aquamarine;
+  cursor: pointer;
+}
+
+.scrollContainer:hover > .scrollSpan {
+  color: white;
+}
+
+
 .scrollContainerUp {
   bottom: 90vh;
 }

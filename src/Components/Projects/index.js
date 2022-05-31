@@ -21,14 +21,14 @@ function Projects({getProjectIndex}) {
           onEnterBack: () => {
             changeClasses("gridLayer", "");
           },
-          onLeave: () => {
+          onLeave: () => {    
             changeClasses("gridLayer", "active");
             changeClasses("scrollContainer", "scrollContainerUp");
             changeClasses("arrowsDown", "arrowsUp");
             changeClasses("projectTitle", "projectTitleVisible");
             changeText("scrollSpan", "Home");
           },
-          onLeaveBack: () => {
+          onLeaveBack: () => {  
             changeClasses("scrollContainer", "");
             changeClasses("arrowsDown", "");
             changeClasses("projectTitle", "");
