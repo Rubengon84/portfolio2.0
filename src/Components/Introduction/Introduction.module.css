@@ -1,5 +1,6 @@
 
 .introductionContainer {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,4 +17,12 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@media screen and (min-width: 500px) {
+
+  .introductionContainer {
+    margin-top: 1rem;
+  }
+
 }

@@ -10,6 +10,12 @@ import mastermindImage from "../Images/projects/masterMind.PNG";
 import redditImage from "../Images/projects/reddit.PNG";
 /******************************/
 
+// Projects Gifs
+import redditGif from "../Images/Gifs/JimmyReddit.gif";
+import portfolioGif from "../Images/Gifs/portfolio.gif";
+import masterMindGif from "../Images/Gifs/mastermind.gif";
+/******************************/
+
 //Tech logo images
 import agileLogo from "../Images/Tech Logos/agile.png";
 import jsLogo from "../Images/Tech Logos/JavaScript_Logo.png";
@@ -43,6 +49,7 @@ export const projectsData = [
     },
     address: "../../Images/projects/reddit.PNG",
     image: redditImage,
+    gif: redditGif, 
     techStack: ["frontEnd", "react", "redux", "gitHub"],
   },
   {
@@ -54,6 +61,7 @@ export const projectsData = [
     },
     address: "../../Images/projects/portfolio.PNG",
     image: portfolioImage,
+    gif: portfolioGif,
     techStack: ["html", "css3", "javaScript", "gitHub"],
   },
   {
@@ -68,6 +76,7 @@ export const projectsData = [
     },
     address: "../../Images/projects/masterMind.PNG",
     image: mastermindImage,
+    gif: masterMindGif,
     techStack: [
       "figma",
       "agile",
