@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  margin: 2rem 0 3rem 0;
 }
 
 .contentImage {
@@ -42,6 +42,11 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.contentImage img {
+  width: 100%;
+  height: 100%;
 }
 
 .linksTechContainer {
@@ -91,9 +96,4 @@
   .linksContainer {
     flex-direction: row;
   }
-
-  .techContainer {
-    
-  }
-
 }
