@@ -16,7 +16,7 @@ function ProjectExplanation({ projectData }) {
       <div className={css.contentContainer}>
         <div
           className={css.contentImage}
-          style={{ backgroundImage: `url(${projectData.image})` }}
+          style={{ backgroundImage: `url(${projectData.gif})` }}
         >  
         </div>
         <div className={css.linksTechContainer}>
