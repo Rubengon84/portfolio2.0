@@ -2,14 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
+import { Auth0Provider } from "@auth0/auth0-react";
 import App from "./Components/App/";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <Auth0Provider
+      domain="rubengon.eu.auth0.com"
+      clientId="R4XknGRjwYruqvnuymnWG9p7fkZnJEcG"
+      redirectUri={"http://localhost:3000/projects"}
+    >
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Auth0Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -5,6 +5,7 @@ import ProjectExplanation from "../ProjectExplanation";
 import ProjectSlide from "../ProjectSlide";
 import "react-slideshow-image/dist/styles.css";
 import css from "./ProjectsDesk.module.css";
+import Comments from "../Comments";
 
 function ProjectsDesk({ projectIndex, getProjectIndex }) {
   return (
@@ -61,6 +62,7 @@ function ProjectsDesk({ projectIndex, getProjectIndex }) {
         })}
       </Slide>
       <ProjectExplanation projectData={projectsData[projectIndex]} />
+      <Comments />
     </div>
   );
 }
