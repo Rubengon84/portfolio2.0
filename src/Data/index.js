@@ -1,4 +1,3 @@
-
 // Projects Images
 import apptivityImage from "../Images/projects/apptivity.PNG";
 import portfolioImage from "../Images/projects/portfolio.PNG";
@@ -14,6 +13,11 @@ import redditImage from "../Images/projects/reddit.PNG";
 import redditGif from "../Images/Gifs/JimmyReddit.gif";
 import portfolioGif from "../Images/Gifs/portfolio.gif";
 import masterMindGif from "../Images/Gifs/mastermind.gif";
+import appTivityGif from "../Images/Gifs/apptivity.gif";
+import catLogueGif from "../Images/Gifs/Catlogue.gif";
+import rugWebsiteGif from "../Images/Gifs/RugWebsite.gif";
+import photoShowroomGif from "../Images/Gifs/PhotoShowroom.gif";
+import piggeonsGif from "../Images/Gifs/Piggeons.gif";
 /******************************/
 
 //Tech logo images
@@ -49,7 +53,7 @@ export const projectsData = [
     },
     address: "../../Images/projects/reddit.PNG",
     image: redditImage,
-    gif: redditGif, 
+    gif: redditGif,
     techStack: ["frontEnd", "react", "redux", "gitHub"],
   },
   {
@@ -101,6 +105,7 @@ export const projectsData = [
     },
     address: "../../Images/projects/apptivity.PNG",
     image: apptivityImage,
+    gif: appTivityGif,
     centerPiece: true,
     techStack: [
       "figma",
@@ -130,6 +135,7 @@ export const projectsData = [
     },
     address: "../../Images/projects/cats.PNG",
     image: catsImage,
+    gif: catLogueGif,
     techStack: [
       "html",
       "css3",
@@ -149,6 +155,7 @@ export const projectsData = [
     },
     address: "../../Images/projects/rug.PNG",
     image: rugImage,
+    gif: rugWebsiteGif,
     techStack: ["html", "css3", "javaScript", "gitHub"],
   },
   {
@@ -160,6 +167,7 @@ export const projectsData = [
     },
     address: "../../Images/projects/photo-showroom.PNG",
     image: photoShowroomImage,
+    gif: photoShowroomGif,
     techStack: [
       "html",
       "css3",
@@ -179,6 +187,7 @@ export const projectsData = [
     },
     address: "../../Images/projects/pigeons.PNG",
     image: pigeonsImage,
+    gif: piggeonsGif,
     techStack: ["auth0", "frontEnd", "react", "express", "netlify", "gitHub"],
   },
 ];
@@ -203,5 +212,5 @@ export const techStack = {
   postgresSQL: postgresSQLLogo,
   postman: postmanLogo,
   react: reactLogo,
-  redux: reduxLogo
-}
+  redux: reduxLogo,
+};
