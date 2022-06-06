@@ -1,6 +1,7 @@
 import React from "react";
 import { Slide } from "react-slideshow-image";
 import { projectsData } from "../../Data";
+import { Link } from "react-router-dom";
 import ProjectExplanation from "../ProjectExplanation";
 import ProjectSlide from "../ProjectSlide";
 import "react-slideshow-image/dist/styles.css";
@@ -49,6 +50,7 @@ function ProjectsDesk({ projectIndex, getProjectIndex }) {
       >
         {projectsData.map((project, index) => {
           return (
+            <Link to={`/projects/${index}`}>
             <ProjectSlide
               key={index}
               index={index}
@@ -58,6 +60,7 @@ function ProjectsDesk({ projectIndex, getProjectIndex }) {
               projectAddress={project.address}
               getProjectIndex={getProjectIndex}
             />
+            </Link>
           );
         })}
       </Slide>

@@ -12,7 +12,7 @@ function ProjectGridLayer({
 }) {
   return (
     <div className={centerPiece ? `gridLayer centerPiece` : `gridLayer`}>
-      <Link to="/projects">
+      <Link to={`/projects/${index}`}>
         <ProjectGridBlock
           projectImage={projectImage}
           getProjectIndex={getProjectIndex}
