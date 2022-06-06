@@ -44,7 +44,6 @@ function ProjectExplanation({ projectData }) {
           <h3>Tech Stack</h3>
           <div className={css.techContainer}>
             {projectData.techStack.map((tech, index) => {
-              console.log({ tech });
               return <TechLogo techLogo={techStack[`${tech}`]} key={index} />;
             })}
           </div>

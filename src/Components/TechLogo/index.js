@@ -2,7 +2,6 @@ import React from 'react'
 import css from "./TechLogo.module.css";
 
 function TechLogo({techLogo}) {
-  console.log(techLogo);
   return (
     <div
       className={css.techLogoContainer}
