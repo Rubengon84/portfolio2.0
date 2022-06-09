@@ -9,7 +9,7 @@ import css from "./SocialMedia.module.css";
 
 // Container component to hold all the social media buttons.
 function SocialMedia() {
-  console.log(window.location.pathname);
+  const urlPath = window.location.pathname;
 
   return (
     <aside className={css.socialMediaContainer}>
@@ -33,7 +33,7 @@ function SocialMedia() {
         link="https://drive.google.com/file/d/1cY4ZltQA8iNMpazutv9qRDod0ha7FD8H/view?usp=sharing"
         text="CV"
       />
-      {window.location.pathname === "/projects" ? (
+      { /projects/.test(urlPath) ? (
         <MediaButton image={homeLogo} noTarget={true} link="/" text="Home" />
       ) : (
         ""

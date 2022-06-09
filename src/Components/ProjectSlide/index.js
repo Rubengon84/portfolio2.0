@@ -2,6 +2,7 @@ import React from "react";
 import css from "./ProjectSlide.module.css";
 
 function ProjectSlide({ projectImage, getProjectIndex, index, projectTitle, selected }) {
+  console.log(selected);
   return (
     <div
       className={
