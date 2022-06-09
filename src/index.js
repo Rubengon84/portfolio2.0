@@ -11,7 +11,7 @@ ReactDOM.render(
     <Auth0Provider
       domain="rubengon.eu.auth0.com"
       clientId="R4XknGRjwYruqvnuymnWG9p7fkZnJEcG"
-      redirectUri={"http://localhost:3000/projects"}
+      redirectUri={"window.location.origin"}
     >
       <BrowserRouter>
         <App />

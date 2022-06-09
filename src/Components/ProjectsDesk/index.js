@@ -1,7 +1,7 @@
 import React from "react";
 import { Slide } from "react-slideshow-image";
 import { projectsData } from "../../Data";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ProjectExplanation from "../ProjectExplanation";
 import ProjectSlide from "../ProjectSlide";
 import "react-slideshow-image/dist/styles.css";
@@ -9,6 +9,10 @@ import css from "./ProjectsDesk.module.css";
 import Comments from "../Comments";
 
 function ProjectsDesk({ projectIndex, getProjectIndex }) {
+
+  const params = useParams();
+  getProjectIndex(Number(params.projectIndex));
+
   return (
     <div className={css.projectsDesk}>
       <Slide
