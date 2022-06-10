@@ -6,12 +6,19 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import App from "./Components/App/";
 import reportWebVitals from "./reportWebVitals";
 
+const onRedirectCallback = (appState) => {
+  History.push(
+    appState && appState.returnTo ? appState.returnTo : window.location.pathname
+  );
+};
+
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
       domain="rubengon.eu.auth0.com"
       clientId="R4XknGRjwYruqvnuymnWG9p7fkZnJEcG"
-      redirectUri={"window.location.origin"}
+      redirectUri={window.location.origin}
+      onRedirectCallback={onRedirectCallback}
     >
       <BrowserRouter>
         <App />
