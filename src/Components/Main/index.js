@@ -3,7 +3,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
+//import { useAuth0 } from "@auth0/auth0-react";
 import SocialMedia from "../SocialMedia";
 import Home from "../Home";
 import ProjectsDesk from "../ProjectsDesk";
@@ -13,8 +13,8 @@ import css from "./Main.module.css";
 function Main() {
 
 
- const { isAuthenticated, user, isLoading, state } = useAuth0();  
-console.log("state",state);
+ //const { isAuthenticated, user, isLoading, state } = useAuth0();  
+//console.log("state",state);
 
 // console.log("isAuthen",isAuthenticated);
 // console.log("user",user);
