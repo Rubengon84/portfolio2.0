@@ -8,7 +8,9 @@ import reportWebVitals from "./reportWebVitals";
 
 const onRedirectCallback = (appState) => {
   History.push(
-    appState && appState.returnTo ? appState.returnTo : window.location.pathname
+    appState && appState.targetUrl
+      ? appState.targetUrl
+      : window.location.pathname
   );
 };
 
