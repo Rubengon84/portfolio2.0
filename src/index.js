@@ -1,31 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
-import { Auth0Provider } from "@auth0/auth0-react";
 import App from "./Components/App/";
+import Auth0ProviderWithRedirectCallback from "./Components/Auth/Auth0Provider";
 import reportWebVitals from "./reportWebVitals";
-
-const onRedirectCallback = (appState) => {
-  History.push(
-    appState && appState.targetUrl
-      ? appState.targetUrl
-      : window.location.pathname
-  );
-};
 
 ReactDOM.render(
   <React.StrictMode>
-    <Auth0Provider
-      domain="rubengon.eu.auth0.com"
-      clientId="R4XknGRjwYruqvnuymnWG9p7fkZnJEcG"
-      redirectUri={window.location.origin}
-      onRedirectCallback={onRedirectCallback}
-    >
-      <BrowserRouter>
+    <BrowserRouter>
+      <Auth0ProviderWithRedirectCallback>
         <App />
-      </BrowserRouter>
-    </Auth0Provider>
+      </Auth0ProviderWithRedirectCallback>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
